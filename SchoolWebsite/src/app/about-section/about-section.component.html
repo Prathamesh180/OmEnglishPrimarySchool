@@ -1,0 +1,18 @@
+<section id="about">
+  <h1 class="topContent">Welcome to Om English Primary School</h1>
+  <p class="topContent school-tagline">
+    We nurture young minds with care, creativity, and confidence...
+  </p>
+
+  <div id="message2-container">
+    <div class="message-card" *ngFor="let message of messages">
+      <h3>{{ message.title }}</h3>
+      <p>
+        {{ message.expanded ? message.fullText : message.shortText }}
+      </p>
+      <a href="#" (click)="toggleMessage(message, $event)">
+        {{ message.expanded ? "Read less" : "Read more" }}
+      </a>
+    </div>
+  </div>
+</section>

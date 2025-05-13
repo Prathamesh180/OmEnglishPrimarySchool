@@ -1,0 +1,62 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.headerNavContainer {
+  background-color: #da2924;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+
+    @media screen and (max-width: 47.99rem) {
+      font-size: medium;
+      justify-content: space-around;
+    }
+  }
+
+  @media screen and (max-width: 47.99rem) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.schoolNameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-weight: bolder;
+  font-family: var(--bs-body-font-family);
+  //   color: #da491a;
+  color: #da2924;
+  //   background-color: #da491a;
+  //   color: white;
+
+  strong {
+    font-size: 2.5rem;
+
+    @media screen and (max-width: 47.99rem) {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 47.99rem) {
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+  }
+}
+
+.Colors {
+  background-color: #da2924;
+  background-color: #d0ba32;
+  background-color: #da491a;
+}
