@@ -1,12 +1,34 @@
-.topContent {
+#about {
   display: flex;
-  justify-content: center;
-}
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  box-sizing: border-box;
 
-.school-tagline {
-  //   padding: 0 19rem 0 25rem;
-  text-align: end;
-  font-style: italic;
+  .topContent {
+    width: 50%;
+    padding-right: 1.25rem;
+
+    &:first-of-type {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #da2924;
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+
+    &.school-tagline {
+      margin-top: 0.615rem;
+      text-align: end;
+      font-style: italic;
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .topContent {
+      width: 100%;
+    }
+  }
 }
 
 #message2-container {
@@ -19,9 +41,15 @@
 .message-card {
   flex: 1 1 100%;
   background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.2rem 0.7rem 0.3rem #917f7f;
+
+  &:hover {
+    transform: scale(1.005);
+    transition: transform 1s medium;
+  }
 }
 
 .message-card h3 {

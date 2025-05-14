@@ -1,0 +1,35 @@
+.admissions-container {
+  color: white;
+  background-color: #193c6e;
+  padding: 1rem 1.875rem;
+  max-width: 31.25rem;
+  margin: 1.25rem auto;
+  border-radius: 0.625rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 2rem;
+
+  &:hover {
+    background-color: #da2924;
+  }
+
+  @media (min-width: 48rem) {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+
+  section#admissions {
+    h2 {
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.625rem;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
