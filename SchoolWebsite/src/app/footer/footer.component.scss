@@ -1,0 +1,115 @@
+.site-footer {
+  background-color: #2c3e50; // deep slate
+  color: #f9f9f9; // near white text
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+
+  a {
+    color: #e3f2fd; // light accent
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    .footer-about {
+      @media screen and (min-width: 48rem) {
+        padding-right: 2.5rem;
+      }
+
+      .school-logo {
+        img {
+          @media screen and (min-width: 48rem) {
+            margin-left: 26%;
+          }
+        }
+      }
+    }
+
+    .footer-col {
+      flex: 1 1 250px;
+
+      @media screen and (min-width: 48rem) {
+        margin-left: 2rem;
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+        color: #ff4646; // school accent red
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .footer-logo {
+        max-width: 6rem;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+
+        @media screen and (max-width: 47.99rem) {
+          padding: 0 2rem;
+        }
+      }
+    }
+
+    .footer-contact {
+      .social-icons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          filter: brightness(0) invert(1); // make black icons white
+          transition: filter 0.3s ease;
+
+          &:hover {
+            filter: brightness(1) invert(0.8);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 47.99rem) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0rem;
+
+      .footer-col {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

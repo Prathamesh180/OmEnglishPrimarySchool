@@ -1,0 +1,94 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #da2924;
+    position: relative;
+    text-align: center;
+
+    @media screen and (min-width: 48rem) {
+      margin-bottom: 2rem;
+      margin: 5rem 0 2rem 0;
+    }
+
+    @media screen and (max-width: 47.99rem) {
+      font-size: 2rem;
+    }
+
+    &::after {
+      right: 0;
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.25rem;
+      background-color: #d0ba32;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+
+      @media screen and (max-width: 47.99rem) {
+        width: 6rem;
+      }
+    }
+  }
+
+  .gallery-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+
+    .gallery-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .slide {
+      /* Make every slide a 4:3 box (or pick your own ratio) */
+      flex: 0 0 60%; // adjust how many peek on desktop
+      max-width: 600px; // optional: absolute cap
+      aspect-ratio: 4 / 3; // forces a uniform box shape
+      overflow: hidden; // crop overflow
+      margin: 0 4rem;
+      scroll-snap-align: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // fills the box, cropping as needed
+        display: block;
+      }
+    }
+
+    /* Responsive tweaks */
+    @media screen and (max-width: 64rem) {
+      .slide {
+        flex: 0 0 75%;
+        max-width: none;
+      }
+    }
+
+    @media screen and (min-width: 48rem) and (max-width: 64rem) {
+      .slide {
+        flex: 0 0 90%;
+      }
+    }
+
+    @media screen and (max-width: 47.99rem) {
+      .slide {
+        flex: 0 0 100%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,20 +1,24 @@
-<div class="navContainer">
-  <div class="schoolNameContainer">
-    <span>
-      <a href="#"> <img src="school-logo.jpg" alt="School Logo" /></a>
-    </span>
-    <strong>Om English Primary School</strong>
-    <img src="school-logo.jpg" alt="Founder Photo" />
-  </div>
-  <div class="headerNavContainer">
-    <!-- <mat-toolbar color="{{ color1 }}"> -->
-    <!-- <span class="spacer"></span> -->
-    <!-- Adds spacing to push the links to the right -->
-    <a href="#about">About</a>
-    <a href="#admissions">Admissions</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-    <!-- </mat-toolbar> -->
-  </div>
-</div>
+<section class="header-section">
+  <nav class="navShell">
+    <div class="navContainer">
+      <div class="schoolNameContainer">
+        <span>
+          <a href="#">
+            <!-- <img src="assets/school-logo.png" alt="School Logo" /> -->
+            <img src="assets/School-logo.png" alt="School Logo" />
+          </a>
+        </span>
+        <strong>Om English Primary School</strong>
+        <img src="assets/Founder-photo.png" alt="Founder Photo" />
+      </div>
+
+      <div class="headerNavContainer">
+        <a [routerLink]="[]" fragment="about-section">About</a>
+        <a [routerLink]="[]" fragment="admissions-section">Admissions</a>
+        <a [routerLink]="[]" fragment="gallery-section">Gallery</a>
+        <a [routerLink]="[]" fragment="features-section">Features</a>
+        <a [routerLink]="[]" fragment="contact-section">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+</section>

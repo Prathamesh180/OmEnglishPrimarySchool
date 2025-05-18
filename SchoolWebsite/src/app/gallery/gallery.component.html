@@ -1,7 +1,40 @@
-<section id="gallery">
-  <h2>Our School Life</h2>
-  <div class="gallery-grid">
-    <img src="assets/img1.jpg" alt="Sports Day" />
-    <img src="assets/img2.jpg" alt="Art Class" />
+<section id="gallery-section">
+  <div class="main-container">
+    <h2 class="section-title">Campus Moments</h2>
+    <div class="gallery-container">
+      <button
+        mat-icon-button
+        color="primary"
+        class="nav prev"
+        (click)="onPrev()"
+      >
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+
+      <div #slider class="gallery-slider">
+        <div
+          class="slide mat-elevation-z2"
+          *ngFor="let img of images(); let i = index"
+        >
+          <!-- NgOptimizedImage for responsive srcset, lazy loading, size hints -->
+          <img
+            ngSrc="{{ img }}"
+            width="400"
+            height="300"
+            alt="Gallery image {{ i + 1 }}"
+            priority
+          />
+        </div>
+      </div>
+
+      <button
+        mat-icon-button
+        color="primary"
+        class="nav next"
+        (click)="onNext()"
+      >
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
   </div>
 </section>

@@ -1,7 +1,8 @@
-#about {
+#about-section {
   display: flex;
   flex-wrap: wrap;
   padding: 2.5rem;
+  padding-bottom: 2rem;
   box-sizing: border-box;
 
   .topContent {
@@ -14,19 +15,38 @@
       color: #da2924;
       margin-bottom: 0;
       margin-top: 1rem;
+
+      @media screen and (max-width: 47.99rem) {
+        font-size: 2.5rem;
+        width: 100%;
+      }
     }
 
     &.school-tagline {
       margin-top: 0.615rem;
       text-align: end;
       font-style: italic;
-      font-size: 2.25rem;
+      font-size: 1.25rem;
+    }
+
+    @media screen and (max-width: 47.99rem) {
+      width: 60%;
     }
   }
 
-  @media (max-width: 48rem) {
+  @media screen and (max-width: 47.99rem) {
+    padding: 1rem;
+
     .topContent {
       width: 100%;
+
+      &:first-of-type {
+        font-size: 1.75rem;
+      }
+
+      &.school-tagline {
+        font-size: 1.3rem;
+      }
     }
   }
 }
@@ -35,20 +55,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .message-card {
-  flex: 1 1 100%;
+  flex: 2 40%;
   background-color: #f9f9f9;
   border: 0.0625rem solid #ccc;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.2rem 0.7rem 0.3rem #917f7f;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease;
 
   &:hover {
-    transform: scale(1.005);
-    transition: transform 1s medium;
+    transform: translateY(-0.25rem) scale(1.01);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -64,7 +86,7 @@
 }
 
 /* Desktop layout */
-@media screen and (min-width: 48rem) {
+@media screen and (max-width: 47rem) {
   .message-card {
     flex: 1 1 45%;
   }

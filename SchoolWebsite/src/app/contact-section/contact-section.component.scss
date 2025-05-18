@@ -1,0 +1,78 @@
+.contact {
+  padding: 2rem 6rem 3rem 6rem;
+  background-color: #f8f9fa;
+  color: #333;
+
+  h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #da2924;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1.5rem 0;
+
+    &::after {
+      right: 0;
+      content: "";
+      display: block;
+      width: 6rem;
+      height: 0.25rem;
+      background-color: #d0ba32;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .contact-left,
+    .contact-right {
+      flex: 2 45%;
+      font-size: 1.1rem;
+    }
+
+    .contact-right {
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .school-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    padding: 2rem;
+    .contact-wrapper {
+      flex-direction: column;
+      gap: 0;
+
+      .contact-left,
+      .contact-right {
+        flex: 1 1 100%;
+      }
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+  }
+}

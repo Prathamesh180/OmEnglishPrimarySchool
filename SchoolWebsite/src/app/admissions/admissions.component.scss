@@ -1,34 +1,65 @@
-.admissions-container {
-  color: white;
-  background-color: #193c6e;
-  padding: 1rem 1.875rem;
-  max-width: 31.25rem;
-  margin: 1.25rem auto;
-  border-radius: 0.625rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 2rem;
+#admissions-section {
+  scroll-margin-top: 6rem;
 
-  &:hover {
-    background-color: #da2924;
+  .admissions-promo {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #da2924;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1.5rem 0;
+
+    &::after {
+      right: 0;
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.25rem;
+      background-color: #d0ba32;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+
+      @media screen and (max-width: 47.99rem) {
+        margin-top: 1rem;
+        width: 10rem;
+      }
+    }
   }
 
-  @media (min-width: 48rem) {
+  #admissions-container {
+    color: white;
+    background-color: #193c6e;
+    padding: 1rem 1.875rem;
+    max-width: 31.25rem;
+    border-radius: 0.625rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.25rem;
     margin-left: auto;
-    margin-right: 5%;
-  }
+    margin-right: 2.5rem;
 
-  section#admissions {
-    h2 {
-      margin: 1rem 0 0.5rem 0;
+    &:hover {
+      background-color: #da2924;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    @media (max-width: 47.99rem) {
+      margin: auto;
+      margin: 1.5rem 1rem;
+    }
 
-      li {
-        margin-bottom: 0.625rem;
-        font-size: 1.125rem;
+    .admissions {
+      h2 {
+        margin: 1rem 0 0.5rem 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.625rem;
+          font-size: 1.125rem;
+        }
       }
     }
   }
