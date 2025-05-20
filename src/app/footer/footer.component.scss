@@ -109,6 +109,12 @@
 
       .footer-col {
         flex: 1 1 100%;
+
+        @media (max-width: 47.99rem) {
+          p {
+            text-align: left;
+          }
+        }
       }
     }
   }
