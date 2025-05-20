@@ -49,16 +49,31 @@
 
     .admissions {
       h2 {
-        margin: 1rem 0 0.5rem 0;
+        margin: 0.5rem 0 0.5rem 0;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
       }
 
       ul {
+        li {
+          list-style-type: circle;
+          margin-left: 3rem;
+        }
+      }
+
+      ol {
         list-style-type: none;
         padding: 0;
 
         li {
-          margin-bottom: 0.625rem;
           font-size: 1.125rem;
+          list-style-type: decimal;
+          margin-left: 3rem;
         }
       }
     }
